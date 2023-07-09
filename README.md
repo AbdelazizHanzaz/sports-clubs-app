@@ -48,28 +48,52 @@ Sports Clubs App is a web application that allows users to discover and explore 
 
 5. Create a .env.local file in the root of the frontend directory and add the following environment variables:
 
-  ```bash
-  REACT_APP_API_URL=http://localhost:8000/api
+   ```bash
+   REACT_APP_API_URL=http://localhost:8000/api
 
-5. Start the development server:
+6. Start the development server:
 
     ```bash
     npm start
 
-6. The application should now be running at http://localhost:3000.
-
+8. The application should now be running at http://localhost:3000.
 
 
 ### Backend Setup
 
 1. Navigate to the project's backend directory:
+
+   ```bash
+    cd sports-clubs-app/backend
+
 2. Install the dependencies:
-3. Create a copy of the .env.example file and name it .env. Update the database connection details in the .env file.
-4. Generate an application key:
-5. Run the database migrations:
-6. Generate a JWT secret key:
-7. Start the backend server:
-8. The API endpoints should now be accessible at http://localhost:8000/api.
+
+   ```bash
+   composer install
+
+4. Create a copy of the .env.example file and name it .env. Update the database connection details in the .env file.
+
+5. Generate an application key:
+
+   ```bash
+   php artisan key:generate
+
+6. Run the database migrations:
+
+   ```bash
+   php artisan migrate
+
+7. Generate a JWT secret key:
+
+   ```bash
+   php artisan jwt:secret
+
+8. Start the backend server:
+
+    ```bash
+   php artisan serve
+
+9. The API endpoints should now be accessible at http://localhost:8000/api.
 
 ### Contributing
 
